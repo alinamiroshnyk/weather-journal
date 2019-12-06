@@ -13,3 +13,5 @@ npm install
 ```
 npm start
 ```
+## Usage
+Enter your zip code and a message and you will see the current temperature for your area and a message you entered :)
