@@ -1,8 +1,9 @@
 /* Global Variables */
-const apiKey = "5786c5850507bacd769e423f2b76d2d1"; //!!!!!!!!
+const apiKey = "df2a1559605cafdf6569234234819f95"; //!!!!!!!!
 const fetchtUrl = "/get_entries";
 const postUrl = "/post_entries";
 const fetchWeatherUrl = "//api.openweathermap.org/data/2.5/weather";
+// api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=df2a1559605cafdf6569234234819f95
 
 const fetchEntries = async () => {
   const response = await fetch(fetchtUrl);
@@ -35,7 +36,7 @@ const postEntries = async (data = {foo: 'bar'}) => {
 };
 
 const fetchWeather = async (zip) => {
-  const url = `http://${fetchWeatherUrl}zip=${zip}&appid=${apiKey}&units=imperial`;
+  const url = `http:${fetchWeatherUrl}?zip=${zip}&appid=${apiKey}&units=imperial`;
   const response = await fetch(url);
   return await response.json();
 };
